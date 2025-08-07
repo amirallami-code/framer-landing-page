@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@layer components {
+    /* Custom container padding for breakpoints */
+    .container {
+        @apply mx-auto px-5;
+
+        @screen lg {
+            @apply px-20;
+        }
+    }
+}
