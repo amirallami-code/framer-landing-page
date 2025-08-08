@@ -11,12 +11,12 @@ const ProductShowcase = () => {
 
             <section className="bg-gradient-to-b from-white to-[#D2DCFF] py-20 overflow-x-clip">
                 <div className="container">
-                    <div className="max-w-[540px] mx-auto">
+                    <div className="section-wrapper">
                         <div className="flex items-center justify-center">
                             <span className="tag">Boost your productivity</span>
                         </div>
-                        <h2 className="title text-center text-3xl md:text-5xl">A more effective way to track progress</h2>
-                        <p className="description text-center">
+                        <h2 className="title">A more effective way to track progress</h2>
+                        <p className="description">
                             Effortlessly turn your ideas into a fully functional,
                             responsive, SaaS website in just minutes with this template.
                         </p>
@@ -24,7 +24,7 @@ const ProductShowcase = () => {
                     <div className="relative">
                         <Image src={productImage} alt="Product Image" className="mt-10"/>
                         <Image src={pyramidShape} alt="Pyramid Shape" width={262} height={262} className="hidden md:block absolute -right-36 -top-32" />
-                        <Image src={tubeShape} alt="Tube Shape" width={262} height={262} className="hidden md:block absolute -left-36 -bottom-32" />
+                        <Image src={tubeShape} alt="Tube Shape" width={262} height={262} className="hidden md:block absolute -left-36 bottom-24" />
                     </div>
                 </div>
             </section>

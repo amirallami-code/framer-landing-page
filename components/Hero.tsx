@@ -17,10 +17,10 @@ const Hero = () => {
                         <span className="tag">
                             Version 2.0 is here!
                         </span>
-                        <h1 className="title">
+                        <h1 className="title text-5xl md:text-7xl text-start">
                             Pathway to productivity
                         </h1>
-                        <p className="description">
+                        <p className="description text-start">
                             Celebrate the joy of accomplishment with an app designed to track your progress.
                             motivate your efforts, and celebrate your successes
                         </p>

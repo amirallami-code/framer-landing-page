@@ -1,5 +1,7 @@
 "use client"
 
+import { useEffect, useState } from "react";
+import {twMerge} from "tailwind-merge";
 import AppLogo from '@/public/framer-logo.png';
 import { ArrowRight, Menu, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
@@ -38,6 +40,17 @@ const isExternal = (href: string) => /^https?:\/\//.test(href);
 const Header = () => {
     const pathname = usePathname();
 
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => {
+            setScrolled(window.scrollY > 50);
+        };
+
+        window.addEventListener("scroll", onScroll);
+        return () => window.removeEventListener("scroll", onScroll);
+    }, []);
+
     return (
         <>
             <div className="bg-black text-white text-center z-50">
@@ -50,8 +63,8 @@ const Header = () => {
                 </Link>
             </div>
 
-            <header className="sticky top-0 z-50 glass-morphism">
-                <nav className="container h-[70px] flex items-center justify-between bg-none">
+            <header className={twMerge("sticky top-0 z-50 glass-morphism transition-colors duration-300", scrolled && "bg-white/30")} >
+                <nav className="container h-[70px] flex items-center justify-between">
                     <div>
                         <Link href="/public" className="flex items-center gap-3">
                             <Image src={AppLogo} alt="Framer Logo" height={40} width={40} />
@@ -100,7 +113,7 @@ const Header = () => {
                                             Streamline your workflows and boost your productivity
                                         </SheetDescription>
                                         <SheetClose asChild>
-                                            <Button variant="default" className="dark" asChild>
+                                            <Button variant="secondary" className="dark" asChild>
                                                 <Link href="/">Get for free</Link>
                                             </Button>
                                         </SheetClose>
