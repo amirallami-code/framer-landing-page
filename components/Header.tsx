@@ -40,8 +40,8 @@ const Header = () => {
 
     return (
         <>
-            <div className="bg-black text-white text-center py-3.5">
-                <Link href="/public" className="flex justify-center items-center gap-2">
+            <div className="bg-black text-white text-center z-50">
+                <Link href="/public" className="flex justify-center items-center gap-2 py-3.5">
                     <p className="text-gray-400 hidden md:block">
                         Streamline your workflows and boost your productivity
                     </p>
@@ -51,7 +51,7 @@ const Header = () => {
             </div>
 
             <header className="sticky top-0 z-50 glass-morphism">
-                <nav className="container h-16 flex items-center justify-between bg-none">
+                <nav className="container h-[70px] flex items-center justify-between bg-none">
                     <div>
                         <Link href="/public">
                             <Image src={AppLogo} alt="Framer Logo" height={40} width={40} />
@@ -59,11 +59,12 @@ const Header = () => {
                     </div>
 
                     <div>
-                        <div className="block md:hidden">
+                        <div className="flex md:hidden items-center justify-center">
                             <Sheet>
-                                <SheetTrigger asChild>
-                                    <button aria-label="Open menu">
-                                        <Menu className="w-5 h-5" />
+                                <SheetTrigger asChild className="relative cursor-pointer">
+                                    <button aria-label="Open menu" className="flex items-center justify-center">
+                                        <Menu className="w-5 h-5 text-black" />
+                                        <span className="absolute w-14 h-14 opacity-0"></span>
                                     </button>
                                 </SheetTrigger>
                                 <SheetContent side="left" className="bg-black text-white border-black">

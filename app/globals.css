@@ -225,6 +225,16 @@
     nav li {
         @apply list-none;
     }
+
+    .tag {
+        @apply text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight;
+    }
+    .title {
+        @apply text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6;
+    }
+    .description {
+        @apply text-xl text-[#010D3E] tracking-tight mt-6;
+    }
 }
 
 @layer Header {
@@ -262,7 +272,7 @@
 
 
     .glass-morphism {
-        @apply sticky overflow-hidden border border-white/30 bg-white/15
-        backdrop-blur-[15px];
+        @apply sticky overflow-hidden border border-white/20
+        backdrop-blur-[9px];
     }
 }

@@ -6,7 +6,7 @@ import clsx from "clsx";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "Framer Landing Page",
+    title: "Framer",
     description: "Template created by Frontend Tribe, Code by Amirhossein Allami",
 };
 
