@@ -3,13 +3,6 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@layer components {
-    /* Custom container padding for breakpoints */
-    .container {
-        @apply !max-w-screen-xl mx-auto px-5;
-    }
-}
-
 @theme inline {
 
     --radius-sm: calc(var(--radius) - 4px);
@@ -226,6 +219,10 @@
         @apply list-none;
     }
 
+    .container {
+        @apply !max-w-screen-xl mx-auto px-5;
+    }
+
     .tag {
         @apply text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight;
     }
@@ -270,9 +267,13 @@
         m-auto
     }
 
-
     .glass-morphism {
-        @apply sticky overflow-hidden border border-white/20
-        backdrop-blur-[9px];
+        @apply sticky overflow-hidden border border-white/20 bg-white/25 backdrop-blur-[9px];
+    }
+}
+
+@layer Ticker {
+    .logo-ticker-image {
+        @apply h-8 w-auto;
     }
 }

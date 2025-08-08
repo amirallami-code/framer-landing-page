@@ -15,7 +15,7 @@ const Hero = () => {
                 <div className="w-full md:flex items-center justify-between">
                     <div className="md:w-[478px] z-20">
                         <span className="tag">
-                            Version 2.0 is here
+                            Version 2.0 is here!
                         </span>
                         <h1 className="title">
                             Pathway to productivity
