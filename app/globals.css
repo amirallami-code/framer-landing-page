@@ -225,35 +225,44 @@
     nav li {
         @apply list-none;
     }
+}
 
-    .active-tab {
+@layer Header {
+    #active-tab {
         @apply relative;
     }
-    .active-tab:before {
-        @apply  content-['']
-                absolute
-                rounded-full
+    #active-tab:before {
+        @apply
+        content-['']
+        absolute
+        rounded-full
 
-               bg-white
-                md:bg-black
+        bg-white
+        md:bg-black
 
-                w-1
-                md:w-2
+        w-1
+        md:w-2
 
-                h-1
-                md:h-0.5
+        h-1
+        md:h-0.5
 
-                -left-4
-                md:left-0
+        -left-4
+        md:left-0
 
-                right-auto
-                md:right-0
+        right-auto
+        md:right-0
 
-                top-0
-                md:top-8
+        top-0
+        md:top-8
 
-                bottom-0
+        bottom-0
 
-                m-auto
+        m-auto
+    }
+
+
+    .glass-morphism {
+        @apply sticky overflow-hidden border border-white/30 bg-white/15
+        backdrop-blur-[15px];
     }
 }

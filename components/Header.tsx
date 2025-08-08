@@ -1,14 +1,15 @@
 "use client"
 
+import AppLogo from '@/public/framer-logo.png';
+import { ArrowRight, Menu, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import Image from 'next/image';
 import { usePathname } from "next/navigation";
-import AppLogo from '@/public/framer-logo.png';
-import { ArrowRight, Menu } from "lucide-react";
+import { Button } from "@/components/ui/button"
 import {
     Sheet,
     SheetClose,
-    SheetContent,
+    SheetContent, SheetDescription,
     SheetFooter,
     SheetHeader,
     SheetTitle,
@@ -20,7 +21,6 @@ import {
     NavigationMenuItem,
     NavigationMenuLink,
 } from "@/components/ui/navigation-menu"
-import { Button } from "@/components/ui/button"
 
 const navLinks = [
     { label: "Home", href: "/" },
@@ -42,13 +42,16 @@ const Header = () => {
         <>
             <div className="bg-black text-white text-center py-3.5">
                 <Link href="/public" className="flex justify-center items-center gap-2">
-                    <span>Get started for free</span>
+                    <p className="text-gray-400 hidden md:block">
+                        Streamline your workflows and boost your productivity
+                    </p>
+                    <span className="text-white">Get started for free</span>
                     <ArrowRight className="w-4 h-4 mt-0.5" />
                 </Link>
             </div>
 
-            <header className="sticky top-0 z-50">
-                <nav className="container h-16 flex items-center justify-between">
+            <header className="sticky top-0 z-50 glass-morphism">
+                <nav className="container h-16 flex items-center justify-between bg-none">
                     <div>
                         <Link href="/public">
                             <Image src={AppLogo} alt="Framer Logo" height={40} width={40} />
@@ -70,7 +73,8 @@ const Header = () => {
                                     <div className="grid flex-1 auto-rows-min gap-6 p-4 mx-4">
                                         {navLinks.map(({ label, href, external }) => {
                                             const isActive = pathname === href || (pathname === "/" && href === "/");
-                                            const className = isActive ? "active-tab" : "";
+                                            const className = "flex flex-row gap-2 hover:bg-transparent";
+                                            const id = isActive ? "active-tab" : "";
 
                                             return external ? (
                                                 <a
@@ -80,16 +84,20 @@ const Header = () => {
                                                     rel="noopener noreferrer"
                                                     className={className}
                                                 >
+                                                    <ArrowUpRight className="w-4 h-4 mt-0.5" />
                                                     {label}
                                                 </a>
                                             ) : (
-                                                <Link key={label} href={href} className={className}>
+                                                <Link key={label} href={href} id={id} className={className}>
                                                     {label}
                                                 </Link>
                                             );
                                         })}
                                     </div>
                                     <SheetFooter>
+                                        <SheetDescription className="text-gray-400">
+                                            Streamline your workflows and boost your productivity
+                                        </SheetDescription>
                                         <SheetClose asChild>
                                             <Button variant="default" className="dark" asChild>
                                                 <Link href="/">Get for free</Link>
@@ -104,26 +112,30 @@ const Header = () => {
                             <NavigationMenu className="gap-3">
                                 {navLinks.map(({ label, href, external }) => {
                                     const isActive = pathname === href;
-                                    const className = isActive ? "active-tab" : "";
+                                    const className = "hover:bg-transparent";
+                                    const id = isActive ? "active-tab" : "";
 
                                     return (
                                         <NavigationMenuItem key={label}>
                                             {external ? (
                                                 <NavigationMenuLink asChild>
-                                                    <a
-                                                        href={href}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className={className}
-                                                    >
-                                                        {label}
-                                                    </a>
+                                                    <Button variant="link" className={className}>
+                                                        <a
+                                                            href={href}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                        >
+                                                            {label}
+                                                        </a>
+                                                    </Button>
                                                 </NavigationMenuLink>
                                             ) : (
                                                 <NavigationMenuLink asChild>
-                                                    <Link href={href} className={className}>
-                                                        {label}
-                                                    </Link>
+                                                    <Button variant="link" className={className}>
+                                                        <Link href={href} id={id}>
+                                                            {label}
+                                                        </Link>
+                                                    </Button>
                                                 </NavigationMenuLink>
                                             )}
                                         </NavigationMenuItem>
@@ -131,7 +143,7 @@ const Header = () => {
                                 })}
 
                                 <NavigationMenuItem>
-                                    <Button className="px-4 !rounded-lg" asChild>
+                                    <Button className="px-4" asChild>
                                         <Link href="/">Get for free</Link>
                                     </Button>
                                 </NavigationMenuItem>
