@@ -159,7 +159,7 @@
     .tag {
         @apply text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight;
     }
-    .section-wrapper {
+    .heading-wrapper {
         @apply max-w-[540px] mx-auto;
     }
     .title {
@@ -167,6 +167,10 @@
     }
     .description {
         @apply text-center text-xl text-[#010D3E] tracking-tight mt-6;
+    }
+
+    .card {
+        @apply max-w-xs w-full p-8 bg-white border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA];
     }
 }
 
@@ -204,7 +208,7 @@
     }
 
     .glass-morphism {
-        @apply sticky overflow-hidden border border-white/20 backdrop-blur-[9px];
+        @apply sticky overflow-hidden border-white/20 backdrop-blur-[9px];
     }
 }
 

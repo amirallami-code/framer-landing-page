@@ -11,7 +11,7 @@ const ProductShowcase = () => {
 
             <section className="bg-gradient-to-b from-white to-[#D2DCFF] py-20 overflow-x-clip">
                 <div className="container">
-                    <div className="section-wrapper">
+                    <div className="heading-wrapper">
                         <div className="flex items-center justify-center">
                             <span className="tag">Boost your productivity</span>
                         </div>

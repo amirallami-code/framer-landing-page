@@ -63,7 +63,7 @@ const Header = () => {
                 </Link>
             </div>
 
-            <header className={twMerge("sticky top-0 z-50 glass-morphism transition-colors duration-300", scrolled && "bg-white/30")} >
+            <header className={twMerge("sticky top-0 z-50 glass-morphism transition-colors duration-300", scrolled && "bg-white/30 border")} >
                 <nav className="container h-[70px] flex items-center justify-between">
                     <div>
                         <Link href="/public" className="flex items-center gap-3">

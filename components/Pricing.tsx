@@ -61,7 +61,7 @@ const Pricing = () => {
     return (
         <section className="py-24">
             <div className="container">
-                <div className="section-wrapper">
+                <div className="heading-wrapper">
                     <h2 className="title">Pricing</h2>
                     <p className="description">
                         Free forever. Upgrade for unlimited tasks, better security, and exclusive features.
@@ -69,7 +69,7 @@ const Pricing = () => {
                 </div>
                 <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:items-end lg:justify-center">
                     {pricingTiers.map(({ title, monthlyPrice, buttonText, popular, inverse, features }) => (
-                        <div key={title} className={twMerge("max-w-xs w-full p-8 bg-white border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA]", inverse && "border-black bg-black text-white")}>
+                        <div key={title} className={twMerge("card", inverse && "border-black bg-black text-white")}>
                             <div className="flex justify-between items-center">
                                 <h3 className={twMerge("text-lg font-bold text-black/50", inverse && "text-white/60")}>{title}</h3>
                                 {popular && (
