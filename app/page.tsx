@@ -4,7 +4,7 @@ import ProductShowcase from "@/components/ProductShowcase";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import CallToAction from "@/components/CallToAction";
-
+import Footer from "@/components/Footer";
 export default function Home() {
   return (
       <>
@@ -14,6 +14,7 @@ export default function Home() {
           <Pricing />
           <Testimonials />
           <CallToAction />
+          <Footer />
       </>
   );
 }
