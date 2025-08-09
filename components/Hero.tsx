@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from 'next/image';
 import { Button } from "@/components/ui/button"
-import {ArrowRight, Cog} from "lucide-react";
+import {ArrowRight} from "lucide-react";
 import cogImage from "@/public/shapes/cog.png";
 import cynlinderImage from "@/public/shapes/cylinder.png";
 import noodleImage from "@/public/shapes/noodle.png";
@@ -38,10 +38,10 @@ const Hero = () => {
                             </Button>
                         </div>
                     </div>
-                    <div className="mt-20 md:mt-0 md:h-[648px] flex items-center justify-center md:flex-1 relative">
+                    <div className="md:h-[648px] relative flex items-center justify-center md:flex-1 mt-20 md:mt-0 ">
                         <Image src={cogImage} alt="Cog Shape" className="md:absolute md:h-full md:w-auto md:max-w-none z-10"/>
-                        <Image src={cynlinderImage} width={200} height={200} alt="Cylinder Shape" className="hidden md:block -top-8 -left-20 md:absolute" />
-                        <Image src={noodleImage} width={200} height={200} alt="Noodle Shape" className="hidden md:block -bottom-28 -right-10 md:absolute rotate-30" />
+                        <Image src={cynlinderImage} width={200} height={200} alt="Cylinder Shape" className="hidden md:block md:absolute -top-8 -left-20" />
+                        <Image src={noodleImage} width={200} height={200} alt="Noodle Shape" className="hidden md:block md:absolute -bottom-28 -right-10 rotate-30" />
                     </div>
                 </div>
             </div>
