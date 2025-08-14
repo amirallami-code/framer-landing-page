@@ -4,6 +4,12 @@ A modern, responsive SaaS landing page built with Next.js 15, TypeScript, and Ta
 
 ![Landing Page Preview](https://github.com/amirallami-code/framer-landing-page/blob/main/public/demo.png)
 
+<div align="center">
+   
+  [View Live Site](https://framer-amirallami.vercel.app/) · [Report Bug](https://github.com/amirallami-code/framer-landing-page/issues) · [Ask a question](https://github.com/amirallami-code/framer-landing-page/issues)
+  
+</div>
+
 ## ✨ Features
 
 - **Modern Design** - Clean, professional layout with gradient backgrounds and glassmorphism effects
@@ -14,10 +20,6 @@ A modern, responsive SaaS landing page built with Next.js 15, TypeScript, and Ta
 - **Performance Optimized** - Built with Next.js 15 for optimal performance
 - **SEO Ready** - Optimized for search engines
 - **Smooth Animations** - Framer Motion integration for fluid animations
-
-## 🚀 Demo
-
-[Live Demo](https://framer-amirallami.vercel.app/) | [View on GitHub](https://github.com/amirallami-code/framer-landing-page)
 
 ## 🛠️ Tech Stack
 
