@@ -2,7 +2,7 @@
 
 A modern, responsive SaaS landing page built with Next.js 15, TypeScript, and Tailwind CSS. Features a sleek design with smooth animations, testimonials, pricing tiers, and a mobile-first approach.
 
-![Landing Page Preview](https://via.placeholder.com/800x400/183EC2/FFFFFF?text=Framer+Landing+Page)
+![Landing Page Preview](https://github.com/amirallami-code/framer-landing-page/blob/main/public/demo.png)
 
 ## ✨ Features
 
