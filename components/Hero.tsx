@@ -51,7 +51,7 @@ const Hero = () => {
                         <motion.img
                             src={cogImage.src}
                             alt="Cog Shape"
-                            className="md:absolute md:h-3/4 md:w-auto md:max-w-none z-10"
+                            className="md:absolute md:h-3/4 lg:h-full md:w-auto md:max-w-none z-10"
                             animate={{
                                 translateY: [-20, 20],
                             }}
