@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import {twMerge} from "tailwind-merge";
 import { Button } from "@/components/ui/button"
 import { Check } from "lucide-react";
-import Link from "next/link";
+import { motion } from 'framer-motion';
 
 const pricingTiers = [
   {
@@ -74,9 +75,20 @@ const Pricing = () => {
                                 <h3 className={twMerge("text-lg font-bold text-black/50", inverse && "text-white/60")}>{title}</h3>
                                 {popular && (
                                     <div className="inline-flex text-sm px-3.5 py-1.5 rounded-lg border border-white/20">
-                                        <span className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] bg-clip-text text-transparent font-medium">
+                                        <motion.span
+                                            className="bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF,#E1CD86,#BBCB92,#71C2EF,#3BFFFF,#DD7DDF)] [background-size:200%] bg-clip-text text-transparent font-medium"
+                                            animate={{
+                                                backgroundPositionX: '-100%',
+                                            }}
+                                            transition={{
+                                                duration: 2,
+                                                repeat: Infinity,
+                                                ease: 'linear',
+                                                repeatType: 'loop',
+                                            }}
+                                        >
                                             Most Popular
-                                        </span>
+                                        </motion.span>
                                     </div>
                                 )}
                             </div>
