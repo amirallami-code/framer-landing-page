@@ -69,7 +69,7 @@ const Hero = () => {
                             alt="Cylinder Shape"
                             className="hidden md:block md:absolute -top-8 -left-20"
                             style={{
-                                translateY: translateY,
+                                translateY,
                             }}
                         />
                         <motion.img
@@ -79,7 +79,7 @@ const Hero = () => {
                             alt="Noodle Shape"
                             className="hidden md:block md:absolute -bottom-28 -right-10 rotate-30"
                             style={{
-                                translateY: translateY,
+                                translateY,
                             }}
                         />
                     </div>
