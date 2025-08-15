@@ -66,7 +66,7 @@ const Header = () => {
             <header className={twMerge("sticky top-0 z-50 glass-morphism transition-colors duration-300", scrolled && "bg-white/30 border")} >
                 <nav className="container h-[70px] flex items-center justify-between">
                     <div>
-                        <Link href="/public" className="flex items-center gap-3">
+                        <Link href="/" className="flex items-center gap-3">
                             <Image src={AppLogo} alt="Framer Logo" height={40} width={40} />
                         </Link>
                     </div>
